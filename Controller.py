@@ -4,7 +4,6 @@ import time
 import json
 import os
 import traceback
-import platform
 import serial.tools.list_ports
 import numpy as np
 import threading
@@ -133,11 +132,7 @@ class Accelerometer:
 			"angle": 500
 		}
 
-		if "Windows" in platform.system():
-			clear_cmd = "cls"
-		else:
-			clear_cmd = "clear"
-		self.clear = lambda: os.system(clear_cmd)
+		self.clear = lambda: os.system("cls")
 
 		#self.start()
 		x = threading.Thread(target=self.read_sensor, args=())
