@@ -22,7 +22,7 @@ Upload the code from the Accelerometer.ino file to your Arduino.
 This code simply reads the accelerometer and sends the data to the serial port which will then be read by Controller.py
 
 ### Controller code
-The Controller.py file will simulate the xbox joystick and by reading the data from the arduino it will move the left analog stick.
+The Controller.py file will simulate the Xbox joystick and by reading the data from the arduino it will move the left analog stick.
 
 I still need to create a requirements.txt file, but these commands probably install all the dependencies:
 ```
@@ -31,3 +31,40 @@ pip install numpy
 pip install vgamepad
 pip install matplotlib
 ```
+### Configurations
+
+In the first lines that follow `def __init__(self):` there are a few variables to configure to make the best use of the controller.
+
+When we run we have vertical and horizontal oscillations that we could represent graphically as a sinusoid.
+However, when we use a joystick, if we want to go in a direction, for example forward, we will not intermittently tap our analog stick, but we will tilt it forward while keeping it in that position.
+So, if we took the raw data from the accelerometer while we are running, our character would continue to stop and start turning right and left at each of our steps.
+So the code takes a sample of measurements and makes an average.
+The larger the sample, the fewer errors there will be, but there will be a delay in executing the command.
+
+#The lower the value, the less movement of the shoulders to turn
+self.x_range = 0.8 
+
+#threshold which, if exceeded, will start the curve
+'''self.x_curve_light_threshold = 0.4
+self.x_curve_strong_threshold = 0.8 '''
+self.x_threshold = 0.4
+
+#the lower the value, the lower the speed at which we should run to make our character go at maximum speed
+self.y_max_speed = 2.5
+
+self.speed = {
+	"walk": 0.06,
+	"run": 0.3,
+	"fast_run": 0.7
+}
+
+#the higher the value, the less the left analog stick y-position flickers, but the return to zero position will be slower
+self.n_sample_x = 2
+self.n_sample_y = 10
+
+self.baudrate = 38400 #19200 31250 38400 57600 74880 115200
+self.show_value = False
+self.show_plot = False
+self.x_plot = 200
+self.debug = True
+automatic_choice_port = True
