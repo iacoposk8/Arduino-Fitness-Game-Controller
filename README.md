@@ -4,4 +4,18 @@ This project showcases an innovative Arduino-based controller that simulates the
 ## Watch the demo video on YouTube
 [![Demo video of the project](https://img.youtube.com/vi/4EYHZWyAiZI/0.jpg)](https://www.youtube.com/watch?v=4EYHZWyAiZI)
 
-![Demo gif of the project](https://github.com/iacoposk8/Arduino-Fitness-Game-Controller/blob/main/controller.gif?raw=true)
+![Demo gif of the project](https://github.com/iacoposk8/Arduino-Fitness-Game-Controller/blob/main/images/controller.gif?raw=true)
+
+## How to use
+
+### Requirements
+
+* Arduino nano
+* GY-521 MPU-6050 accelerometer
+
+### Electrical connections
+![Electrical connections](https://github.com/iacoposk8/Arduino-Fitness-Game-Controller/blob/main/images/arduino.jpg?raw=true)
+
+### Arduino code
+Upload the code from the Accelerometer.ino file to your Arduino.
+This code simply reads the accelerometer and sends the data to the serial port which will then be read by Controller.py
