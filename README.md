@@ -20,3 +20,14 @@ This project showcases an innovative Arduino-based controller that simulates the
 ### Arduino code
 Upload the code from the Accelerometer.ino file to your Arduino.
 This code simply reads the accelerometer and sends the data to the serial port which will then be read by Controller.py
+
+### Controller code
+The Controller.py file will simulate the xbox joystick and by reading the data from the arduino it will move the left analog stick.
+
+I still need to create a requirements.txt file, but these commands probably install all the dependencies:
+```
+pip install pyserial
+pip install numpy
+pip install vgamepad
+pip install matplotlib
+```
