@@ -101,5 +101,5 @@ You will find two folders, one with the models with clips and one without clips.
 |--|--|
 | ![Support with clip](https://github.com/iacoposk8/Arduino-Fitness-Game-Controller/blob/main/images/stl_clip.jpg?raw=true) | ![Support without clip](https://github.com/iacoposk8/Arduino-Fitness-Game-Controller/blob/main/images/stl_no_clip.jpg?raw=true) |
 
-The model without clips can be mounted on this back support.
+The model without clips can be mounted on [this back support by Dreamfit](https://www.amazon.it/gp/product/B07QPVP33F).
 The model with clips goes on all shirts but you will notice that it will swing a lot while running, so you will have to find a way to fix the cable at the bottom of the shirt or in the middle.
