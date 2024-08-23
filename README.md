@@ -14,7 +14,7 @@ This project showcases an innovative Arduino-based controller that simulates the
 * GY-521 MPU-6050 accelerometer
 
 ### Electrical connections
-<img src="[URL_dell_immagine](https://github.com/iacoposk8/Arduino-Fitness-Game-Controller/blob/main/images/arduino.jpg?raw=true)" alt="Electrical connections" width="584" height="auto">
+<img src="https://github.com/iacoposk8/Arduino-Fitness-Game-Controller/blob/main/images/arduino.jpg?raw=true" alt="Electrical connections" width="584" height="auto">
 
 
 ### Arduino code
