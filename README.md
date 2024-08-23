@@ -4,4 +4,4 @@ This project showcases an innovative Arduino-based controller that simulates the
 ## Watch the demo video on YouTube
 [![Demo video of the project](https://img.youtube.com/vi/4EYHZWyAiZI/0.jpg)](https://www.youtube.com/watch?v=4EYHZWyAiZI)
 
-[![Demo gif of the project](controller.gif)]
+[![Demo gif of the project](https://github.com/iacoposk8/Arduino-Fitness-Game-Controller/blob/main/controller.gif?raw=true)
