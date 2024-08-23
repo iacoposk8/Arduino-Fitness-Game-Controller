@@ -41,38 +41,45 @@ So, if we took the raw data from the accelerometer while we are running, our cha
 So the code takes a sample of measurements and makes an average.
 The larger the sample, the fewer errors there will be, but there will be a delay in executing the command.
 
-#The lower the value, the less movement of the shoulders to turn
-self.x_range = 0.8 
+The lower the value, the less movement of the shoulders to turn
+`self.x_range = 0.8`
 
-#threshold which, if exceeded, will start the curve
-self.x_threshold = 0.4
+Threshold which, if exceeded, will start the curve
+`self.x_threshold = 0.4`
 
-#the lower the value, the lower the speed at which we should run to make our character go at maximum speed
-self.y_max_speed = 2.5
+The lower the value, the lower the speed at which we should run to make our character go at maximum speed
+`self.y_max_speed = 2.5`
 
-#Speed with which we want, walk, run and run fast
-#Speed with which we want, walk, run and fast run
-#Currently the fast run is activated by pressing the "A" button on the Xbox controller. If you want to change it just change the lines:
-#gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
-#and
-#gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
-#With one of the commands that can be found here
-#https://pypi.org/project/vgamepad/
+Speed with which we want, walk, run and run fast
+Speed with which we want, walk, run and fast run
+Currently the fast run is activated by pressing the "A" button on the Xbox controller. If you want to change it just change the lines:
+gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
+and
+gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
+With one of the commands that can be found here:
+[https://pypi.org/project/vgamepad](https://pypi.org/project/vgamepad).
+
+```
 self.speed = {
 	"walk": 0.06,
 	"run": 0.3,
 	"fast_run": 0.7
 }
+```
 
-#the higher the value, the less the left analog stick y-position flickers, but the return to zero position will be slower
+The higher the value, the less the left analog stick y-position flickers, but the return to zero position will be slower
+```
 self.n_sample_x = 2
 self.n_sample_y = 10
+```
 
-#If set to True the code will automatically find the right port, if it doesn't work, set it to False and during execution it will show you all the ports to choose from
-automatic_choice_port = True
+If set to True the code will automatically find the right port, if it doesn't work, set it to False and during execution it will show you all the ports to choose from
+`automatic_choice_port = True`
 
-#optional ability to enable various types of debugging with graphs and logs
+Optional ability to enable various types of debugging with graphs and logs
+```
 self.show_value = False
 self.show_plot = False
 self.x_plot = 200
 self.debug = True
+```
