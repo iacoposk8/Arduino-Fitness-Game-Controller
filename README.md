@@ -91,3 +91,9 @@ self.show_plot = False
 self.x_plot = 200
 self.debug = True
 ```
+### 3D printing
+
+In the Stl folder there are the files for 3d printing and the blender file for editing. This is the part of the project that needs to be fixed the most, in the future I will solder Arduino and the accelerometer so as not to have wires and I will be able to create a closed case. But for those who want to try this project these models are enough.
+You will find two folders, one with the models with clips and one without clips.
+The model without clips can be mounted on this back support.
+The model with clips goes on all shirts but you will notice that it will swing a lot while running, so you will have to find a way to fix the cable at the bottom of the shirt or in the middle.
