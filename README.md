@@ -42,13 +42,19 @@ So the code takes a sample of measurements and makes an average.
 The larger the sample, the fewer errors there will be, but there will be a delay in executing the command.
 
 The lower the value, the less movement of the shoulders to turn
-`self.x_range = 0.8`
+```
+self.x_range = 0.8
+```
 
 Threshold which, if exceeded, will start the curve
-`self.x_threshold = 0.4`
+```
+self.x_threshold = 0.4
+```
 
 The lower the value, the lower the speed at which we should run to make our character go at maximum speed
-`self.y_max_speed = 2.5`
+```
+self.y_max_speed = 2.5
+```
 
 Speed with which we want, walk, run and run fast
 Speed with which we want, walk, run and fast run
@@ -74,7 +80,9 @@ self.n_sample_y = 10
 ```
 
 If set to True the code will automatically find the right port, if it doesn't work, set it to False and during execution it will show you all the ports to choose from
-`automatic_choice_port = True`
+```
+automatic_choice_port = True
+```
 
 Optional ability to enable various types of debugging with graphs and logs
 ```
