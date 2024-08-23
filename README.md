@@ -45,13 +45,19 @@ The larger the sample, the fewer errors there will be, but there will be a delay
 self.x_range = 0.8 
 
 #threshold which, if exceeded, will start the curve
-'''self.x_curve_light_threshold = 0.4
-self.x_curve_strong_threshold = 0.8 '''
 self.x_threshold = 0.4
 
 #the lower the value, the lower the speed at which we should run to make our character go at maximum speed
 self.y_max_speed = 2.5
 
+#Speed with which we want, walk, run and run fast
+#Speed with which we want, walk, run and fast run
+#Currently the fast run is activated by pressing the "A" button on the Xbox controller. If you want to change it just change the lines:
+#gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
+#and
+#gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
+#With one of the commands that can be found here
+#https://pypi.org/project/vgamepad/
 self.speed = {
 	"walk": 0.06,
 	"run": 0.3,
@@ -62,9 +68,11 @@ self.speed = {
 self.n_sample_x = 2
 self.n_sample_y = 10
 
-self.baudrate = 38400 #19200 31250 38400 57600 74880 115200
+#If set to True the code will automatically find the right port, if it doesn't work, set it to False and during execution it will show you all the ports to choose from
+automatic_choice_port = True
+
+#optional ability to enable various types of debugging with graphs and logs
 self.show_value = False
 self.show_plot = False
 self.x_plot = 200
 self.debug = True
-automatic_choice_port = True
